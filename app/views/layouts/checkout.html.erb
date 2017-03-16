@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IuguWebinar</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'checkout', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="https://js.iugu.com/v2"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

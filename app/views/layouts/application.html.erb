@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IuguWebinar</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if current_user %>
+      Olá <%= current_user.name %>,
+      <%= link_to "logout", session_destroy_path, method: :delete %>
+    <% else %>
+      <%= link_to "logar", session_new_path %>
+      <%= link_to "registrar", registration_new_path %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
