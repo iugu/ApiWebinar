@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   get "/login", to: "session#new", as: "session_new"
   post "/login", to: "session#create", as: "session_create"
   delete "/logout", to: "session#destroy", as: "session_destroy"
+
+  get "/loja/:env", to: "store#index", as: "store_index"
+  post "/loja/:env/create_invoice", to: "store#create_invoice", as: "store_create_invoice"
 end

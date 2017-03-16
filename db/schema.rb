@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309174406) do
+ActiveRecord::Schema.define(version: 20170316163902) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                           null: false
@@ -26,6 +26,10 @@ ActiveRecord::Schema.define(version: 20170309174406) do
     t.string   "customer_id"
     t.string   "subscription_id"
     t.string   "name"
+    t.string   "api_live_token"
+    t.string   "api_test_token"
+    t.string   "api_user_token"
+    t.string   "iugu_account_id"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["remember_me_token"], name: "index_users_on_remember_me_token", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", using: :btree
