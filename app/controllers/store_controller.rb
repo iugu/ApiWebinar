@@ -17,7 +17,7 @@ class StoreController < ApplicationController
       "items[][description]" => params[:description],
       "items[][quantity]" => params[:quantity],
       "items[][price_cents]" => params[:price_cents],
-      "due_date" => "2017-03-16",
+      "due_date" => "2017-03-23",
       "payable_with" => "bank_slip"
     })
     redirect_to store_index_path(env: @env)

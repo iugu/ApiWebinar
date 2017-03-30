@@ -17,4 +17,8 @@ Rails.application.routes.draw do
 
   get "/loja/:env", to: "store#index", as: "store_index"
   post "/loja/:env/create_invoice", to: "store#create_invoice", as: "store_create_invoice"
+
+  get "/administracao_loja", to: "subaccount_administration#index", as: "index_subaccount"
+  post "/administracao_loja/verificacao", to: "subaccount_administration#verify", as: "verify_subaccount"
+  post "/administracao_loja/conta_bancaria", to: "subaccount_administration#change_bank_address", as: "change_bank_address_subaccount"
 end

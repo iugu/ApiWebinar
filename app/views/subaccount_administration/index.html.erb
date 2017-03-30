@@ -1,0 +1,13 @@
+<h1> Sua conta </h1>
+
+<%= form_tag verify_subaccount_path do %>
+  <%= submit_tag "verificar" %>
+<% end %>
+
+<%= form_tag change_bank_address_subaccount_path do %>
+  agência: <%= text_field_tag 'agency' %>
+  conta: <%= text_field_tag 'account' %>
+  tipo de conta: <%= text_field_tag 'account_type' %>
+  banco: <%= text_field_tag 'bank' %>
+  <%= submit_tag "mudar conta bancária" %>
+<% end %>
