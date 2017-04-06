@@ -7,15 +7,15 @@ class RegistrationController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.valid?
-      #create_iugu_customer
-      return render_errors unless create_iugu_subaccount
+      return render_errors unless create_iugu_customer
+      #return render_errors unless create_iugu_subaccount
       @user.save
       auto_login(@user)
     else
       return render_errors(@user.errors)
     end
-    #redirect_to checkout_new_path
-    redirect_to store_index_path(env: "test")
+    redirect_to checkout_new_path
+    #redirect_to store_index_path(env: "test")
   end
 
   private

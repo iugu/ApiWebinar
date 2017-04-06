@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get "/checkout_boleto", to: "checkout#new_boleto", as: "checkout_boleto_new"
   post "/checkout_boleto", to: "checkout#create_boleto", as: "checkout_boleto_create"
 
+  get "/checkout_charge", to: "checkout#new_charge", as: "checkout_charge_new"
+  post "/checkout_charge", to: "checkout#create_charge", as: "checkout_charge_create"
+
   get "/registration", to: "registration#new", as: "registration_new"
   post "/registration", to: "registration#create", as: "registration_create"
 
